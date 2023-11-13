@@ -1,0 +1,46 @@
+` tag as requested.
+
+```mql5
+<code>
+// Strong Support MT5 Indicator
+// Developer - Anonymous
+// Date - XX/XX/XXXX
+
+#property copyright 'Anonymous'
+#property link      'http://www.website.com'
+#property version   '1.00'
+#property indicator_chart_window
+#property indicator_buffers 2
+#property indicator_plots   2
+
+double SupportLevels[];
+double ResistanceLevels[];
+
+int OnInit()
+  {
+     IndicatorBuffers(2);
+        SetIndexBuffer(0,SupportLevels,INDICATOR_DATA);
+           SetIndexBuffer(1,ResistanceLevels,INDICATOR_DATA);
+
+                 return(INIT_SUCCEEDED);
+                   }
+
+                   void OnDeinit(const int reason)
+                     {
+                        // To be filled
+                          }
+
+                          void OnTick()
+                            {
+                               // To be filled
+                                 }
+
+                                 void CalculateSupportAndResistance()
+                                   {
+                                      for(int i=0; i<Bars; i++){
+                                            // Calculate support and resistance levels here
+                                                  // SupportLevels[i] = ...
+                                                        // ResistanceLevels[i] = ...
+                                                           }
+                                                             }
+                                                             
